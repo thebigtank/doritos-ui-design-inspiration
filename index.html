@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doritos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;900&family=Londrina+Solid:wght@300;900&family=Mada:wght@200;400;500;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="overlay first"></div>
+        <div class="overlay second"></div>
+        <div class="overlay third"></div>
+
+
+        <img class="rings" src="assets/rings.png" alt="">
+
+        <header>
+            <div class="logo">
+                <img src="assets/doritos_logo.png" alt="">
+            </div>
+
+            <nav>
+                <ul>
+                    <li><a href="#">products</a></li>
+                    <li><a href="#">about</a></li>
+                    <li><a href="#">our company</a></li>
+                    <li><a href="#">tasty rewards</a></li>
+                    <li><a href="#">where to buy</a></li>
+                </ul>
+            </nav>
+
+            <div class="basket">
+                <a href="">
+                    <ion-icon name="basket"></ion-icon>
+                </a>
+                <span class="basket-items">2</span>
+            </div>
+        </header>
+
+        <section>
+            <div class="product">
+                <h1>
+                    <span class="hide">Light a fire under your taste buds</span>
+                </h1>
+                <h3>
+                    <span class="hide">
+                        nacho cheese
+                    </span>
+                </h3>
+                <p>
+                    <span class="hide">
+                        Corn, Vegetable Oil (Corn, Canola, And/or Sunflower Oil), Maltodextrin (Made From Corn), Salt, Cheddar Cheese (Milk,
+                        Cheese Cultures, Salt, Enzymes), Whey, Monosodium Glutamate, Buttermilk, Romano Cheese (Part-skim Cow's Milk, Cheese
+                        Cultures, Salt, Enzymes), Whey Protein Concentrate, Onion Powder, Corn Flour, Natural And Artificial Flavor, Dextrose,
+                        Tomato Powder, Lactose, Spices, Artificial Color (Yellow 6, Yellow 5, And Red 40), Lactic Acid, Citric Acid, Sugar,
+                        Garlic Powder, Skim Milk, Red And Green Bell Pepper Powder, Disodium Inosinate, And Disodium Guanylate.
+
+                        <strong>CONTAINS MILK INGREDIENTS.</strong>
+                    </span>
+                </p>
+                <h2>
+                    <span class="hide">$3.99</span>
+                </h2>
+                <div class="btn">
+                    <a href="#">Add to basket</a>
+                </div>
+            </div>
+            <div class="product-display">
+                <figure>
+                    <img src="assets/doritos.png" alt="" class="doritos">
+                    <div class="backdrop"></div>
+                    <span>
+                        <img class="chips" src="assets/doritos_chips.png" alt="">
+                        <img class="ketchup" src="assets/ketchup_1.png" alt="">
+                        <img class="chilli" src="assets/suya_pepper.png" alt="">
+                    </span>
+                </figure>
+            </div>
+        </section>
+    </div>
+    
+
+    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
+
+    <script>
+        // Overlay Animations
+        TweenMax.to('.first', 1.5, {
+            delay: 0.1,
+            top: '-100%',
+            ease: Expo.easeInOut
+        });
+
+        TweenMax.to('.second', 1.5, {
+            delay: 0.3,
+            top: '-100%',
+            ease: Expo.easeInOut
+        });
+
+        TweenMax.to('.third', 1.5, {
+            delay: 0.7,
+            top: '-100%',
+            ease: Expo.easeInOut
+        });
+
+        // Header Animations
+        TweenMax.from('.logo img', 1.5, {
+            delay: 1,
+            y: '-150',
+            ease: Expo.easeInOut
+        });
+
+        TweenMax.from('nav ul li a', 1.5, {
+            delay: 1.4,
+            y: '-150',
+            ease: Expo.easeInOut
+        });
+
+        TweenMax.from('.basket', 1.5, {
+            delay: 1.8,
+            y: '-150',
+            ease: Expo.easeInOut
+        });
+
+        // product Animations
+        TweenMax.from('.product h1 .hide', 1.5, {
+            delay: 2,
+            y: '100%',
+            ease: Expo.easeInOut
+        });
+
+        TweenMax.from('.product h3 .hide', 1.5, {
+            delay: 2.4,
+            y: '100%',
+            ease: Expo.easeInOut
+        });
+
+        TweenMax.from('.product p .hide', 1.5, {
+            delay: 2.8,
+            y: '100%',
+            ease: Expo.easeInOut
+        });
+
+        TweenMax.from('.product h2 .hide', 1.5, {
+            delay: 3,
+            y: '100%',
+            ease: Expo.easeInOut
+        });
+
+        TweenMax.from('.product .btn a', 1.5, {
+            delay: 2.4,
+            y: '-70',
+            ease: Expo.easeInOut
+        });
+
+        // Product display animations
+        TweenMax.from('.doritos', 1.5, {
+            delay: 2.5,
+            y: '-150%',
+            ease: Expo.easeInOut
+        });
+        
+        TweenMax.from('.chips', 1.5, {
+            delay: 2.4,
+            x: '200%',
+            ease: Expo.easeInOut
+        });
+
+        TweenMax.from('.ketchup', 1.5, {
+            delay: 2.8,
+            y: '200%',
+            ease: Expo.easeInOut
+        });
+        
+        TweenMax.from('.chilli', 1.5, {
+            delay: 3,
+            y: '200%',
+            ease: Expo.easeInOut
+        });
+
+        TweenMax.from('.backdrop', 1.5, {
+            delay: 1.8,
+            y: '200%',
+            ease: Expo.easeInOut
+        });
+
+    </script>
+
+</body>
+</html>
+
+
